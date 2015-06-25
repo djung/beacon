@@ -1,16 +1,14 @@
 <div class="home-page">
-<div id="promo-slider" class="slider flexslider" flex-slider>
-    <ul class="slides">
-        <li>
-            <img src="images/beacon-mortuary-home.png"  alt="" />
-            <p class="flex-caption">
-                <span class="main" >Beacon Mortuary Homepage</span>
-                <br />
-                <span class="secondary clearfix" >Call us for help.</span>
-            </p>
-        </li>
-    </ul><!--//slides-->
-</div><!--//flexslider-->
+<flex-slider id="promo-slider" slide="s in slides" direction-nav="{{showNav}}">
+    <li>
+        <img ng-src="{{s.src}}">
+        <p class="flex-caption">
+            <span class="main">{{s.main_caption}}</span>
+            <br />
+            <span class="secondary clearfix">{{s.secondary_caption}}</span>
+        </p>
+    </li>
+</flex-slider>
 <section class="promo box box-dark">        
     <div class="col-md-9">
     <h1 class="section-heading">Welcome to Beacon Mortuary</h1>
