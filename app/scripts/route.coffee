@@ -2,28 +2,78 @@
 
 app = angular.module 'beaconDynamicApp'
 
-app.config ($routeProvider) ->
+app.config ($stateProvider, $urlRouterProvider) ->
+    # default
+    $urlRouterProvider.otherwise('/')
 
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .when '/about',
-        templateUrl: 'views/about.html'
-        controller: 'AboutCtrl'
-      .when '/burial-packages.html',
-        templateUrl: 'views/burial-packages.html'
-      .when '/cremation-packages.html',
-        templateUrl: 'views/cremation-packages.html'
-      .when '/burial-packages.html',
-        templateUrl: 'views/burial-packages.html'
-      .when '/general-price-list.html',
-        templateUrl: 'views/general-price-list.html'
-      .when '/custom-quote.html',
-        templateUrl: 'views/custom-quote.html'
-      .when '/contact.html',
-        templateUrl: 'views/contact.html'  
-      .when '/healthy-living.html',
-        templateUrl: 'views/healthy-living.html'
-      .otherwise
-        redirectTo: '/'
+    # app
+    $stateProvider
+        .state 'app',
+            views:
+                'header@':
+                    templateUrl: "views/includes/header.html"
+                    controller: 'HeaderCtrl'
+                'footer@':
+                    templateUrl: 'views/includes/footer.html'
+            abstract: true
+
+    $stateProvider
+        .state 'app.homepage',
+            url: '/'
+            views:
+                'content@':
+                    templateUrl: 'views/main.html'
+                    controller: 'MainCtrl'
+    $stateProvider
+        .state 'app.about',
+            url: '/about'
+            views:
+                'content@':
+                    templateUrl: 'views/about.html'
+                    controller: 'AboutCtrl'
+
+    $stateProvider
+        .state 'app.services',
+            abstract: true
+
+    $stateProvider
+        .state 'app.services.burial-packages',
+            url: '/burial-packages'
+            views:
+                'content@':
+                    templateUrl: 'views/burial-packages.html'
+
+    $stateProvider
+        .state 'app.services.cremation-packages',
+            url: '/cremation-packages'
+            views:
+                'content@':
+                    templateUrl: 'views/cremation-packages.html'
+
+    $stateProvider
+        .state 'app.services.general-price-list',
+            url: '/general-price-list'
+            views:
+                'content@':
+                    templateUrl: 'views/general-price-list.html'
+
+    $stateProvider
+        .state 'app.services.custom-quote',
+            url: '/custom-quote'
+            views:
+                'content@':
+                    templateUrl: 'views/custom-quote.html'
+
+    $stateProvider
+        .state 'app.contact',
+            url: '/contact'
+            views:
+                'content@':
+                    templateUrl: 'views/contact.html'
+
+    $stateProvider
+        .state 'app.healthy-living',
+            url: '/healthy-living'
+            views:
+                'content@':
+                    templateUrl: 'views/healthy-living.html'

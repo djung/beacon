@@ -39,20 +39,20 @@
                 </div><!--//navbar-header-->            
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active nav-item"><a href="#/">Home</a></li>
-                        <li class="active nav-item"><a href="#/about">About Us</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Services<i class="fa fa-angle-down"></i></a>
+                        <li class="nav-item" ui-sref-active="active"><a ui-sref="app.homepage">Home</a></li>
+                        <li class="nav-item" ui-sref-active="active"><a ui-sref="app.about">About Us</a></li>
+                        <li class="nav-item dropdown" dropdown-hover ng-class="{'active': isActive('app.services')}">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#/general-price-list.html">General Price List</a></li>
-                                <li><a href="#/burial-packages.html">Burial Packages</a></li>
-                                <li><a href="#/cremation-packages.html">Cremation Packages</a></li> 
-                                <li><a href="#/custom-quote.html">Custom Quote</a></li>             
+                                <li ui-sref-active="active"><a ui-sref="app.services.general-price-list">General Price List</a></li>
+                                <li ui-sref-active="active"><a ui-sref="app.services.burial-packages">Burial Packages</a></li>
+                                <li ui-sref-active="active"><a ui-sref="app.services.cremation-packages">Cremation Packages</a></li> 
+                                <li ui-sref-active="active"><a ui-sref="app.services.custom-quote">Custom Quote</a></li>             
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a href="#/healthy-living.html">Healthy Living</a></li>
-                        <li class="nav-item"><a href="#/contact.html">Contact Us</a></li>
+                        <li class="nav-item" ui-sref-active="active"><a ui-sref="app.healthy-living">Healthy Living</a></li>
+                        <li class="nav-item" ui-sref-active="active"><a ui-sref="app.contact">Contact Us</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </div><!--//container-->

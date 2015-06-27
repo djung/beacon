@@ -9,6 +9,10 @@
 ###
 app = angular.module 'beaconDynamicApp'
   
+app.controller 'HeaderCtrl', ($scope, $state) ->
+    $scope.isActive = (stateToCheck) ->
+        return $state.includes(stateToCheck)
+
 app.controller 'MainCtrl', ($scope) ->
     $scope.slides = [
         {
