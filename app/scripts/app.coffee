@@ -15,31 +15,9 @@ angular
     'ngCookies',
     'ngMessages',
     'ngResource',
-    'ngRoute',
+    'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angular-flexslider'
   ]
-  .config ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .when '/about',
-        templateUrl: 'views/about.html'
-        controller: 'AboutCtrl'
-      .when '/burial-packages.html',
-        templateUrl: 'views/burial-packages.html'
-      .when '/cremation-packages.html',
-        templateUrl: 'views/cremation-packages.html'
-      .when '/burial-packages.html',
-        templateUrl: 'views/burial-packages.html'
-      .when '/general-price-list.html',
-        templateUrl: 'views/general-price-list.html'
-      .when '/custom-quote.html',
-        templateUrl: 'views/custom-quote.html'
-      .when '/contact.html',
-        templateUrl: 'views/contact.html'  
-      .when '/healthy-living.html',
-        templateUrl: 'views/healthy-living.html'
-      .otherwise
-        redirectTo: '/'
+  

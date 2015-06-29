@@ -7,10 +7,18 @@
  # # MainCtrl
  # Controller of the beaconDynamicApp
 ###
-angular.module 'beaconDynamicApp'
-  .controller 'MainCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
+app = angular.module 'beaconDynamicApp'
+  
+app.controller 'HeaderCtrl', ($scope, $state) ->
+    $scope.isActive = (stateToCheck) ->
+        return $state.includes(stateToCheck)
+
+app.controller 'MainCtrl', ($scope) ->
+    $scope.slides = [
+        {
+            src: "images/beacon-mortuary-home.png"
+            main_caption: "Beacon Mortuary Homepage"
+            secondary_caption: "Call us for help."
+        }
     ]
+    $scope.showNav = $scope.slides.length > 1
