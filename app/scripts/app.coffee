@@ -22,7 +22,7 @@ app = angular.module 'beaconDynamicApp', [
   ]
   
 app.config (RestangularProvider) ->
-    RestangularProvider.setBaseUrl('http://192.168.6.137:5000/')
+    RestangularProvider.setBaseUrl('http://api.beaconmortuary.com//')
 
     RestangularProvider.setRestangularFields
         id: "_id"
