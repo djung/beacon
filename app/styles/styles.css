@@ -1695,6 +1695,11 @@ ul.custom-list-style li {
 .events-wrapper .events-item .details .fa {
   margin-right: 5px;
 }
+/* ======= Health Living Page (Blog) ======= */
+.healthy-living .post img {
+  height: 150px;
+  margin: 0 10px 10px 0;
+}
 /* ======= Contact Page ======= */
 .contact-form .required {
   color: #e14b39;
