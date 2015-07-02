@@ -8,8 +8,7 @@
  #
  # Main module of the application.
 ###
-angular
-  .module 'beaconDynamicApp', [
+app = angular.module 'beaconDynamicApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,6 +17,12 @@ angular
     'ui.router',
     'ngSanitize',
     'ngTouch',
-    'angular-flexslider'
+    'angular-flexslider',
+    'restangular'
   ]
   
+app.config (RestangularProvider) ->
+    RestangularProvider.setBaseUrl('http://api.beaconmortuary.com/')
+
+    RestangularProvider.setRestangularFields
+        id: "_id"

@@ -1636,49 +1636,10 @@ ul.custom-list-style li {
 .home-page .testimonials .people .title {
   color: #999;
 }
-.home-page .awards {
-  background: #fff;
-}
-.home-page .awards .logos {
-  margin: 0;
-  padding: 0;
-}
-.home-page .awards .logos li {
-  list-style: none;
-  margin-right: 0;
-  text-align: center;
-}
-.home-page .awards .logos li img {
-  -webkit-opacity: 0.6;
-  -moz-opacity: 0.6;
-  opacity: 0.6;
-  margin: 0 auto;
-}
-.home-page .awards .logos li img:hover {
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-}
-.home-page .awards .carousel-control {
-  background: none;
-  width: auto;
-  top: 20px;
-  text-shadow: none;
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-}
-.home-page .awards .carousel-control .fa {
-  color: #e8e8e8;
-  font-weight: bold;
-}
-.home-page .awards .carousel-control:hover .fa {
-  color: #999;
+#homepage-bottom {
+  width: 1140px;
+  height: 105px;
+  margin-bottom: 30px;
 }
 /* ======= Courses Page ======= */
 .courses-wrapper .tab-content {
@@ -1733,6 +1694,11 @@ ul.custom-list-style li {
 }
 .events-wrapper .events-item .details .fa {
   margin-right: 5px;
+}
+/* ======= Health Living Page (Blog) ======= */
+.healthy-living .post img {
+  height: 150px;
+  margin: 0 10px 10px 0;
 }
 /* ======= Contact Page ======= */
 .contact-form .required {

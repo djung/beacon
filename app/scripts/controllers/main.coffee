@@ -17,8 +17,8 @@ app.controller 'MainCtrl', ($scope) ->
     $scope.slides = [
         {
             src: "images/beacon-mortuary-home.png"
-            main_caption: "Beacon Mortuary Homepage"
-            secondary_caption: "Call us for help."
+            main_caption: "Beacon Mortuary"
+            secondary_caption: "Let us be the light that guides you"
         }
     ]
     $scope.showNav = $scope.slides.length > 1

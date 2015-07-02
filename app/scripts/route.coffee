@@ -70,6 +70,7 @@ app.config ($stateProvider, $urlRouterProvider) ->
             views:
                 'content@':
                     templateUrl: 'views/contact.html'
+                    controller: 'ContactCtrl'
 
     $stateProvider
         .state 'app.healthy-living',
