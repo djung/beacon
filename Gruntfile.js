@@ -395,7 +395,8 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'plugins/*'
           ]
         }, {
           expand: true,
@@ -406,6 +407,12 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          src: ['plugins/*.*'],
           dest: '<%= yeoman.dist %>'
         }]
       },
