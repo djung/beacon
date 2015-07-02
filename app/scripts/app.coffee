@@ -22,7 +22,7 @@ app = angular.module 'beaconDynamicApp', [
   ]
   
 app.config (RestangularProvider) ->
-    RestangularProvider.setBaseUrl('http://api.beaconmortuary.com//')
+    RestangularProvider.setBaseUrl('http://api.beaconmortuary.com/')
 
     RestangularProvider.setRestangularFields
         id: "_id"
