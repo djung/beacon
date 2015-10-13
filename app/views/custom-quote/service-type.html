@@ -1,0 +1,113 @@
+<h1>Service Type</h1>
+
+<p>You may choose any number or combination of the following. Each option is priced for a period of
+    3 hours during a weekday, between the hours of 9:00am and 5:00pm.</p>
+
+<div class="form-group">
+
+    <h4 class="checkbox">
+        <label>
+            <input type="checkbox" name="viewing" data-ng-model="formData.viewing" data-toggle-basket="Viewing" data-price="250" id="viewing1" value="Viewing">
+            Viewing - <span class="cost">$250</span></label>
+    </h4>
+
+    <p>A viewing is a private family gathering. It normally consists of only immediate family: Parents,
+        spouse and childern. It is not formal and provides a very intimate setting, allowing for very personal
+        goodbyes.</p>
+
+    <div id="viewing" class="visible-container" data-ng-class="formData.viewing != true ? 'hide' : '' ">
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="viewing_off_hours" data-ng-model="formData.viewing_off_hours" data-toggle-basket="Viewing Off Hours" data-price="175">
+                I wish to conduct any of these services after 5pm, during a weekend or holiday, an additional charge of $175.00 will apply to the initial price.</label>
+        </div>
+
+        <div class="number multiply-input form-horizontal row">
+            <div class="col-xs-2 pdr0">
+                <input id="viewing_additional" type="number" name="viewing_additional" class="form-control" min="0" max="20" data-ng-model="formData.viewing_additional" data-toggle-basket="Additional Viewing Hours" data-price="75">
+            </div>
+            <label class="col-xs-10 text-left" for="viewing_additional">The Time for each gathering allotted is 3 hours. Any number of hours exceeding 3 per
+    gathering will include an additional charge of $75 per hour.</label>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <h4 class="checkbox">
+        <label>
+            <input type="checkbox" name="visitation" data-ng-model="formData.visitation" data-toggle-basket="Visitation" data-price="400" id="visitation1" value="Visitation">
+            Visitation - <span class="cost">$400</span></label>
+    </h4>
+
+    <p>A visitation is open to the public and is less formal than a service. Typically, there are no speakers
+        and guests arrive and leave on their own accord within the time alloted.</p>
+
+    <div id="visitation" class="visible-container" data-ng-class="formData.visitation != true ? 'hide' : '' ">
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="visitation_off_hours" data-ng-model="formData.visitation_off_hours" data-toggle-basket="Visitation Off Hours" data-price="175">
+                I wish to conduct any of these services after 5pm, during a weekend or holiday, an
+                additional charge of $175.00 will apply to the initial price.</label>
+        </div>
+
+        <div class="number multiply-input form-horizontal row">
+            <div class="col-xs-2 pdr0">
+                <input id="visitation_additional" type="number" name="visitation_additional" class="form-control" min="0" max="20" data-ng-model="formData.visitation_additional" data-toggle-basket="Additional Visitation Hours" data-price="75">
+            </div>
+            <label class="col-xs-10 text-left" for="visitation_additional">The Time for each gathering allotted is 3 hours. Any number of hours exceeding 3 per
+gathering will include an additional charge of $75 per hour.</label>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <h4 class="checkbox">
+        <label>
+            <input type="checkbox" name="ceremony_service" data-ng-model="formData.ceremony_service" data-toggle-basket="Ceremony Service" data-price="400" id="ceremony_service1" value="Ceremony Service">
+            Church, Chapel Or Home Service - <span class="cost">$400</span></label>
+    </h4>
+
+    <p>A service is a large formal public gathering. Typically, there is a speaker and prayers and eulogies
+        are given. Personal thoughts and memories of individuals are shared.</p>
+
+    <div id="ceremony_service" class="visible-container" data-ng-class="formData.ceremony_service != true ? 'hide' : '' ">
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="ceremony_service_off_hours" data-ng-model="formData.ceremony_service_off_hours" data-toggle-basket="Ceremony Service Off Hours" data-price="175">
+                I wish to conduct any of these services after 5pm, during a weekend or holiday, an
+                additional charge of $175.00 will apply to the initial price.</label>
+        </div>
+
+        <div class="number multiply-input form-horizontal row">
+            <div class="col-xs-2 pdr0">
+                <input id="ceremony_service_additional" type="number" name="ceremony_service_additional" class="form-control" min="0" max="20" data-ng-model="formData.ceremony_service_additional" data-toggle-basket="Additional Ceremony Service Hours" data-price="75">
+            </div>
+            <label class="col-xs-10 text-left" for="ceremony_service_additional">The Time for each gathering allotted is 3 hours. Any number of hours exceeding 3 per
+                gathering will include an additional charge of $75 per hour.</label>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.other-care-preparations" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.service-details" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

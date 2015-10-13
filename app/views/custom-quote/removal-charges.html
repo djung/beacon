@@ -1,0 +1,51 @@
+<h1>Removal Charges</h1>
+
+<p>This section is designed to provide an approximate cost for initial removal. During the removal process
+    our funeral home will bring the deceased into our care from the place of death. These prices are quoted
+    under the assumption that services will be provided within a 25-mile radius of Santa Monica. If the
+    location is outside 25 miles please add an additional $3 for each additional mile.</p>
+
+<div class="form-group">
+
+    <h4 class="title-block">Standard Retrieval Fee - <span>$395</span></h4>
+
+    <div class="help-block">
+        <p>The standard retrieval fee to move the deceased from their current location</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input required="required" type="checkbox" name="standard_retrieval" data-ng-model="formData.standard_retrieval" data-toggle-basket="Standard Retrieval Fee" data-price="395" id="standard_retrieval1"> I agree with the Standard Retrieval Fee</label>
+    </div>
+</div>
+
+<div class="form-group">
+
+    <h4 class="title-block">Extra Attendant Fee - <span>$75</span></h4>
+
+    <div class="help-block">
+        <p>If the initial transfer is from a non-medical facility, such as a private residence an additional attendant is
+            needed and an additional charge of $75.00 will apply. An additional attendant may also be needed if the
+            deceased is over 275lbs.</p>
+
+        <p>Will an additional attendant be needed?</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="extra_attendant" data-ng-model="formData.extra_attendant" data-toggle-basket="Extra Attendant Fee" data-price="75" id="extra_attendant1"> Yes, an additional attendant is needed</label>
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.indeclinable-charges" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.preservation-options" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

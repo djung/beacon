@@ -1,0 +1,45 @@
+<h1>Other Care and Preparations</h1>
+
+<div class="form-group">
+
+    <h4 class="title-block">Cosmetics, Dressing, Casketing and other personal details. - <span>$220</span></h4>
+
+    <div class="help-block">
+        <p>This option is company policy if you select certain funeral arrangements, such as a funeral with a
+            viewing. If you do not want cosmetics, dressing and casketing, you have the right to choose an
+            arrangement that does not require you to pay for it, such as direct cremation or immediate burial.</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="cosmetics" data-ng-model="formData.cosmetics" data-toggle-basket="Cosmetics" data-price="220"> I would like Cosmetics added to my quote</label>
+    </div>
+</div>
+
+<div class="form-group">
+
+    <h4 class="title-block">Autopsy Repair - <span>$250</span></h4>
+
+    <div class="help-block">
+        <p>This charge will only be required as company policy if a viewing is requested or there is an open
+            casket. Was an autopsy preformed and will there be an open casket?</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="autopsy_repair" data-ng-model="formData.autopsy_repair" data-toggle-basket="Autopsy Repair" data-price="250"> I would like Autopsy Repair added to my quote</label>
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.disposition-options" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.service-type" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

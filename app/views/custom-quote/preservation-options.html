@@ -1,0 +1,50 @@
+<h1>Preservation Options</h1>
+
+<div class="form-group">
+
+    <h4 class="title-block">Preservation Fee</h4>
+
+    <div class="help-block">
+        <p>California law requires the deceased to be refrigerated or embalmed within 24 hours of being taken into
+            our care.</p>
+
+        <p style="text-decoration: underline;">Except in certain special cases, law does not require embalming. Embalming may be necessary, however,
+            if you select certain funeral arrangements, such as a funeral with a viewing. If you do not want embalming,
+            you usually have the right to choose an arrangement that does not require you to pay for it, such as direct
+            cremation or immediate burial.</p>
+
+        <p>Note: If conditions and circumstances of the deceased are optimal, our mortuary does allow viewing
+            without embalming. However, this will be determined on a case-by-case basis at the funeral directors
+            discretion.</p>
+    </div>
+
+    <h4 class="radio">
+        <label>
+            <input required="required" type="radio" name="preservation" data-ng-model="formData.preservation" data-toggle-basket="Embalming" data-price="350" id="preservation1" value="Embalming"> Embalming - $350</label>
+    </h4>
+    <p>Embalming is the art and science of preserving human remains by treating them (in its modern
+        form with chemicals) to forestall decomposition. The intention is to keep the deceased suitable for
+        public display at a funeral, for religious reasons, or for medical and scientific purposes such as
+        their use as anatomical specimens. The three goals of embalming are sanitization, presentation
+        and preservation (or restoration).</p>
+    <h4 class="radio">
+        <label>
+            <input required="required" type="radio" name="preservation" data-ng-model="formData.preservation" data-toggle-basket="Refrigeration" data-price="350" id="preservation2" value="Refrigeration"> Refrigeration - $350</label>
+    </h4>
+    <p>Refrigeration in lieu of embalming, places the deceased in a lower controlled temperature space to
+        forestall decomposition.</p>
+
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.removal-charges" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.disposition-options" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

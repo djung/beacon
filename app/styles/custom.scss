@@ -1,0 +1,188 @@
+.custom-quote {
+  .pdr0 {
+    padding-right: 0 !important;
+  }
+
+  .pdl0 {
+    padding-left: 0 !important;
+  }
+
+  .pd0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-normal {
+    font-weight: normal !important;
+  }
+
+  $theme-color: #57a89a;
+  $theme-color-dark: darken($theme-color, 2%);
+
+  .main-nav {
+    background: $theme-color;
+    margin-bottom: 30px;
+
+    .navbar-toggle {
+      background: #23433e;
+      color: #fff !important;
+      border-radius: 0;
+    }
+
+    .navbar-collapse {
+      border-color: transparent;
+      padding: 0;
+    }
+
+    .nav > li {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: 'open sans', arial, sans-serif;
+
+      & > a {
+        font-size: 13px;
+        color: #cde5e1;
+
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+
+  }
+
+  .number, .fields-container {
+    &.form-horizontal {
+
+      .control-label {
+        text-align: inherit;
+        //font-weight: normal;
+      }
+    }
+  }
+
+  .merch-item {
+    max-width: 28px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  $checkbox: 15px;
+  input[type=checkbox] {
+    position: relative;
+    height: 13px;
+    width: 13px;
+
+    &:before {
+      cursor: pointer;
+      content: '';
+      height: $checkbox;
+      line-height: $checkbox;
+      width: $checkbox;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: -( $checkbox - 13 ) 0 0;
+      font-family: 'Glyphicons Halflings';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+      color: #fff;
+      background-color: darken(#F5F5F5, 1%);
+      border: 1px solid #A9A5A5;
+      text-shadow: 1px 1px 1px #000;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    &:checked:before {
+      content: "\e013";
+      background-color: darken($theme-color, 1%);
+      border-color: $theme-color;
+    }
+
+  }
+
+  $checkbox2: 20px;
+
+  .table {
+    input[type=checkbox] {
+
+      &:before {
+        height: $checkbox2;
+        line-height: $checkbox2;
+        width: $checkbox2;
+      }
+
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .navbar-nav {
+      margin: 7.5px -15px;
+      counter-reset: section;
+
+      & > li {
+
+        background-color: lighten($theme-color, 3%);
+
+        &:before {
+          counter-increment: section;
+          content: counters(section, ".") " ";
+          padding: 14px;
+          border: 1px solid $theme-color-dark;
+          display: block;
+          float: left;
+        }
+
+        & > a {
+          text-align: center;
+          float: left;
+          padding-left: 0;
+          padding-right: 0;
+          width: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          background-color: $theme-color-dark;
+          -webkit-transition: width 1s, padding 1s;
+          -moz-transition: width 1s, padding 1s;
+          -ms-transition: width 1s, padding 1s;
+          -o-transition: width 1s, padding 1s;
+          transition: width 1s, padding 1s;
+
+          &.active{
+            display: block;
+            padding: 15px;
+            width: 218px;
+          }
+        }
+
+        &:hover > a {
+          display: block;
+          padding: 15px;
+          width: 218px;
+          background-color: darken($theme-color-dark, 2%) !important;
+        }
+      }
+
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<h1>Indeclinable Charges</h1>
+
+<div class="form-group">
+
+    <h4 class="title-block">Basic Service Fee - <span>$800</span></h4>
+
+    <div class="help-block">
+        <p>The fee for our basic services and overhead will be added to the total cost of the funeral arrangements
+            you select. (This fee is already included in our charge for all packages, direct cremations, and immediate
+            burials, forwarding and receiving remains). This price covers:</p>
+
+        <p>Our staff and facilities to respond to your initial request for service 24 hours a day - 7 days a week.</p>
+
+        <ul>
+            <li>Arrangement conference with the family.</li>
+            <li>Coordination service plans with the cemetery, crematory and other parties involved.</li>
+            <li>Clerical and administrative assistance in the completion of various associated documents and forms.</li>
+        </ul>
+
+        <p>The Basic Service fee also covers a proportionate share of overhead costs such as utilities, facilities and
+            equipment maintenance, as well as governmental compliance.</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input required="required" type="checkbox" name="basic_service" data-ng-model="formData.basic_service" data-toggle-basket="Basic Service Fee" data-price="800">
+            I agree with the Basic Service Fee</label>
+    </div>
+</div>
+
+<div class="form-group">
+
+    <h4 class="title-block">Disposition Permit - <span>$12</span></h4>
+
+    <div class="help-block">
+        <p>A disposition permit is required prior to burial, entombment or cremation of a body. The Local Registrar
+            issues the disposition permit after the documentation of death worksheet has been filed. This permit must
+            be given to the cemetery official or crematory operator where the final disposition occurs.</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input required="required" type="checkbox" name="disposition_permit" data-ng-model="formData.disposition_permit" data-toggle-basket="Disposition Permit" data-price="12">
+            I agree with the Disposition Permit Fee</label>
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-6 col-sm-3 col-sm-offset-9">
+        <a data-ui-sref="app.services.custom-quote.removal-charges" class="btn btn-block btn-info">
+            Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,228 @@
+<h1>Miscellaneous</h1>
+
+<div class="form-group">
+
+    <h4>Certified Copies of the Death Certificate</h4>
+
+    <p>To calculate how many death certificates you need. You will need one for each of the following:</p>
+
+    <ul>
+        <li>One if you need to transfer a bank account or safe deposit box</li>
+        <li>One for each of the transfers of title on property, such as, real estate or vehicles</li>
+        <li>One for each life insurance policy or burial of funeral policy</li>
+        <li>One for each of the transfers of stocks, bonds, CD's or money markets</li>
+        <li>One to roll over an IRA</li>
+        <li>One for tax returns</li>
+    </ul>
+
+    <p>Each certified copies of the death certificate will be $21</p>
+
+    <div class="number multiply-input form-horizontal row">
+        <div class="col-xs-2 pdr0">
+            <input id="death_certificates" type="number" name="death_certificates" class="form-control" min="0" max="20" data-ng-model="formData.death_certificates" data-toggle-basket="Death Certificates" data-price="21">
+        </div>
+        <label class="col-xs-10 control-label text-left" for="death_certificates"># of certificates to add to quote</label>
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <h4>Merchandise</h4>
+
+    <p>If you purchase a casket or alternative container from somewhere other than the funeral
+        establishment, the law prohibits the funeral establishment from charging a "casket handling" fee.
+        However, your purchase must meet the standards set by the cemetery or crematory and must take
+        into consideration the size of the body. Remember to shop wisely, since retail casket sellers are
+        not bound by the same laws or regulations that govern funeral establishments, crematories, and
+        cemeteries. If purchasing items in advance, insist that any money you pay be placed in a trust, and
+        be sure to get a copy of the trust agreement.</p>
+
+    <p>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#burialModal" data-ng-class="formData.disposition != 'Burial' ? 'hide' : ''">Add A Casket</button>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cremationModal" data-ng-class="formData.disposition != 'Cremation' ? 'hide' : ''">Add A Urns</button>
+        <a data-ui-sref="app.services.custom-quote.disposition-options" class="btn btn-block btn-info" data-ng-class="formData.disposition ? 'hide' : ''">Select Disposition Option</a>
+    </p>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="burialModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Select Merchandise</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label>
+                                <select name="type" class="by-type form-control" data-ng-model="filterCasketType">
+                                    <option value="">--- Filter By Type ---</option>
+                                    <option data-ng-repeat="n in dataMerch.filters.types | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label>
+                                <select name="type" class="by-materials form-control" data-ng-model="filterCasketMaterials" data-ng-disabled="!ffMaterials[0]">
+                                    <option value="">--- Filter By Materials ---</option>
+                                    <option data-ng-repeat="n in ffMaterials | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label>
+                                <select name="type" class="by-finish form-control" data-ng-model="filterCasketFinish" data-ng-disabled="!ffFinish[0]">
+                                    <option value="">--- Filter By Finish ---</option>
+                                    <option data-ng-repeat="n in ffFinish | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="form-group">
+                            <label>
+                                <select name="type" class="by-interior form-control" data-ng-model="filterCasketInterior" data-ng-disabled="!ffInterior[0]">
+                                    <option value="">--- Filter By Interior ---</option>
+                                    <option data-ng-repeat="n in ffInterior | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Material</th>
+                        <th>Finish</th>
+                        <th>Interior</th>
+                        <th>Price</th>
+                        <th>Add</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr data-ng-repeat="item in dataMerch.items | orderBy:'type' | filter:{ type:filterCasketType } | filter:{ material:filterCasketMaterials } | filter:{ finish:filterCasketFinish } | filter:{ interior:filterCasketInterior }" data-ng-hide="dataMerch == 'undefined'">
+                        <td>
+                            <a class="merch-item" href="img/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="img/thumb/{{item.img}}" alt=""></a>
+                        </td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.type}}</td>
+                        <td>{{item.material}}</td>
+                        <td>{{item.finish}}</td>
+                        <td>{{item.interior}}</td>
+                        <td>{{item.price | currency}}</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" data-ng-true-value="'{{item.name}}'" name="miscellaneous_items[{{$index}}]" data-ng-model="formData.miscellaneous_items[$index]" data-toggle-basket="{{item.name}}" data-price="{{item.price}}">
+                            </label>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="cremationModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Select Merchandise</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <label>
+                                <select name="type" class="by-type form-control" data-ng-model="filterUrnType">
+                                    <option value="">--- Filter By Type ---</option>
+                                    <option data-ng-repeat="n in dataMerch.filters.types | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-4">
+
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Width</th>
+                        <th>Height</th>
+                        <th>Depth</th>
+                        <th>Volume</th>
+                        <th>Price</th>
+                        <th>Add</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr data-ng-repeat="item in dataMerch.items | filter:{ type:filterUrnType }" data-ng-hide="dataMerch == 'undefined'">
+                        <td>
+                            <a class="merch-item" href="img/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="img/thumb/{{item.img}}" alt=""></a>
+                        </td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.type}}</td>
+                        <td>{{item.width}}</td>
+                        <td>{{item.height}}</td>
+                        <td>{{item.depth}}</td>
+                        <td>{{item.volume}}</td>
+                        <td>{{item.price | currency}}</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" data-ng-true-value="'{{item.name}}'" name="miscellaneous_items[{{$index}}]" data-ng-model="formData.miscellaneous_items[$index]" data-toggle-basket="{{item.name}}" data-price="{{item.price}}">
+                            </label>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.transport-details" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.total" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>
