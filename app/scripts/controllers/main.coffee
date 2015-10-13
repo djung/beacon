@@ -16,7 +16,7 @@ app.controller 'HeaderCtrl', ($scope, $state) ->
 app.controller 'MainCtrl', ($scope) ->
     $scope.slides = [
         {
-            src: "images/beacon-mortuary-home.png"
+            src: "images/beacon-homepage.png"
             main_caption: "Beacon Mortuary"
             secondary_caption: "Let us be the light that guides you"
         }
