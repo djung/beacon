@@ -6,11 +6,12 @@ app.factory 'functionFactory', ->
     object = {}
 
     object.indexOfObject = (f_array, f_value, f_key) ->
-        f_array.reduce ((current, value, index) ->
+        f_array.reduce (current, value, index) ->
             if value[f_key] == f_value and current == -1
                 return index
             current
-        ), -1
+        , -1
+        return
 
     object.removeFromBasket = (scope, f_value, f_key) ->
         index_now = scope.basket.items.map((each) ->
@@ -27,5 +28,6 @@ app.factory 'functionFactory', ->
             if val[f_key] == f_value
                 return val
             return
+        return
 
     object
