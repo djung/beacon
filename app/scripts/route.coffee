@@ -58,6 +58,12 @@ app.config ($stateProvider, $urlRouterProvider) ->
                     templateUrl: 'views/general-price-list.html'
 
     $stateProvider
+        .state 'app.services.quote',
+            url: '/quote'
+            views:
+                'content@':
+                    templateUrl: 'views/custom-quote.html'
+    $stateProvider
         .state 'app.services.custom-quote',
             abstract: true
             url: '/custom-quote'
