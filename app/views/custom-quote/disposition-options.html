@@ -1,0 +1,51 @@
+<h1>Disposition Options</h1>
+
+<div class="form-group">
+
+    <h4 class="radio">
+        <label>
+            <input required="required" type="radio" name="disposition" data-ng-model="formData.disposition" data-toggle-basket="Burial" data-price="0" id="disposition1" value="Burial"> Burial</label>
+    </h4>
+
+    <p>If you choose burial, you may have to pay fees at the cemetery of your choice. Such fees may
+        include grave or mausoleum space, opening and closing costs of the grave vault or grave liner,
+        head stone or markers, endowment care, etc. Please check with your cemetery to see what they
+        will require.</p>
+
+    <h4 class="radio">
+        <label>
+            <input required="required" type="radio" name="disposition" data-ng-model="formData.disposition" data-toggle-basket="Cremation" data-price="0" id="disposition2" value="Cremation"> Cremation</label>
+    </h4>
+
+    <p>Refrigeration in lieu of embalming, places the deceased in a lower controlled temperature space to
+        forestall decomposition.</p>
+
+    <div id="disposition" class="visible-container" data-ng-class="formData.disposition != 'Cremation' ? 'hide' : ''">
+        <div class="radio">
+            <label>
+                <input data-ng-required="formData.disposition == 'Cremation'" type="radio" name="disposition_weight" data-ng-model="formData.disposition_weight" data-toggle-basket="Disposition Weight" data-price="350" id="disposition_weight1" value="Deceased is under 300 lbs"> Deceased is under 300 lbs - $350</label>
+        </div>
+        <div class="radio">
+            <label>
+                <input data-ng-required="formData.disposition == 'Cremation'" type="radio" name="disposition_weight" data-ng-model="formData.disposition_weight" data-toggle-basket="Disposition Weight" data-price="550" id="disposition_weight2" value="Deceased is between 300 lbs and 500 lbs"> Deceased is between 300 lbs and 500 lbs - $550</label>
+        </div>
+        <div class="radio">
+            <label>
+                <input data-ng-required="formData.disposition == 'Cremation'" type="radio" name="disposition_weight" data-ng-model="formData.disposition_weight" data-toggle-basket="Disposition Weight" data-price="0" id="disposition_weight3" value="Deceased is above 500 lbs"> Deceased is above 500 lbs - TBD</label>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.preservation-options" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.other-care-preparations" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

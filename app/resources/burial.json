@@ -1,0 +1,472 @@
+{
+  "filters": {
+    "types": [
+      "Cloth Caskets",
+      "All Wood Construction",
+      "Cremation Containers",
+      "Hardwood",
+      "20 Gauge Steel Non-Gasketed",
+      "18 Gauge Steel",
+      "Stainless Steel",
+      "Solid Copper",
+      "Solid Bronze",
+      "Alternative Container"
+    ],
+    "materials": [
+      "Cardboard",
+      "Oak",
+      "Fiberwood",
+      "Poplar Veneer",
+      "Solid Poplar",
+      "Solid Pine",
+      "Solid Oak",
+      "Solid Ash",
+      "Solid Maple",
+      "Solid Cherry",
+      "Solid Mahogany",
+      "20 Gauge Steel",
+      "18 Gauge Steel",
+      "Stainless Steel",
+      "32oz Copper",
+      "32oz Bronze"
+    ],
+    "finish": [
+      "Blue Sparkle Shaded Silver",
+      "Brushed Copper Autumn Haze",
+      "Brushed Light Orchid Shaded Rosebud",
+      "Brushed Natural Shaded London Blue",
+      "Brushed Natural Shaded Silver Pearl",
+      "Brushed Natural/Colonial Pewter",
+      "Brushed Natural/Golden Fawn",
+      "Brushed Natural/Heritage Bronze",
+      "Brushed Natural/Misty Rose",
+      "Brushed Natural/Venetian Bronze",
+      "Steel Embossed Doeskin",
+      "Flannel Gray Exterior",
+      "High Polished Dark Georgetown",
+      "Laminated Light Pine",
+      "Light Unfinished",
+      "London Blue",
+      "Matte Light Natural",
+      "Medium Cherry",
+      "Medium Matte Fawn/Shaded",
+      "Monarch Blue",
+      "Olive Green Hammertex",
+      "Orchid",
+      "Pastel Pink Shaded White",
+      "Polished Dark Cherrytone",
+      "Polished Dark Walnut",
+      "Polished Medium Venetian",
+      "Russet Bronze",
+      "Sandstone Metallic",
+      "Satin Dark Walnut",
+      "Silver",
+      "Silver Rose Shaded Silver",
+      "Silver Shaded Ebony",
+      "Silver Shaded Light Gunmetal",
+      "Spruce Blue Shaded Platinum",
+      "Stain Medium American Ash",
+      "Sunset Gold Shaded Venetian Bronze",
+      "Uncovered",
+      "Venetian Bronze",
+      "White Shaded Pink",
+      "Wineberry Shaded Silver"
+    ],
+    "interior": [
+      "Almond Mayfield Velvet",
+      "Almond Velvet",
+      "Arbutus Velvet",
+      "Beige Velvet",
+      "Blue Capri Crepe",
+      "Blue Crepe",
+      "Ivory Crepe",
+      "Moselle Capri Crepe",
+      "Moselle Crepe",
+      "None",
+      "Pink Capri Crepe",
+      "Pink Crepe",
+      "Pink Velvet",
+      "Rose Crepe de Chine",
+      "Rosestone Crepe",
+      "Rosetan Capri Crepe",
+      "Rosetan Crepe",
+      "Rosetan Sand Pebble Crepe",
+      "Rosetone Crepe",
+      "Sahara Velvet",
+      "Silver Capri Crepe",
+      "Silver Velvet",
+      "White Crepe"
+    ]
+  },
+  "items": [
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Affinity",
+      "material": "20 Gauge Steel",
+      "finish": "Russet Bronze",
+      "interior": "Rosetan Capri Crepe",
+      "price": 2520,
+      "img": "caskets/Affinity_Bronze.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Affinity",
+      "material": "20 Gauge Steel",
+      "finish": "London Blue",
+      "interior": "Silver Capri Crepe",
+      "price": 2520,
+      "img": "caskets/Affinity_Blue.jpg"
+    },
+    {
+      "type": "Alternative Container",
+      "name": "Alternative Container",
+      "material": "Cardboard",
+      "finish": "Uncovered",
+      "interior": "None",
+      "price": 50,
+      "img": "caskets/Alternative_Container.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Augusta",
+      "material": "Solid Pine",
+      "finish": "Matte Light Natural",
+      "interior": "Rosetan Crepe",
+      "price": 2730,
+      "img": "caskets/Augusta.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Belvedere",
+      "material": "20 Gauge Steel",
+      "finish": "Olive Green Hammertex",
+      "interior": "Moselle Crepe",
+      "price": 1160,
+      "img": "caskets/Belvedere.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Clearwood",
+      "material": "Solid Maple",
+      "finish": "Polished Medium Venetian",
+      "interior": "Rose Crepe de Chine",
+      "price": 5160,
+      "img": "caskets/Clearwood.jpg"
+    },
+    {
+      "type": "Cloth Caskets",
+      "name": "Fayette",
+      "material": "Cardboard",
+      "finish": "Steel Embossed Doeskin",
+      "interior": "Ivory Crepe",
+      "price": 760,
+      "img": "caskets/Fayette.jpg"
+    },
+    {
+      "type": "Stainless Steel",
+      "name": "Galaxy",
+      "material": "Stainless Steel",
+      "finish": "Brushed Natural/Misty Rose",
+      "interior": "Sahara Velvet",
+      "price": 5040,
+      "img": "caskets/Galaxy_Misty_Rose.jpg"
+    },
+    {
+      "type": "Stainless Steel",
+      "name": "Galaxy",
+      "material": "Stainless Steel",
+      "finish": "Brushed Natural/Colonial Pewter",
+      "interior": "Silver Velvet",
+      "price": 5040,
+      "img": "caskets/Galaxy_Pewter.jpg"
+    },
+    {
+      "type": "18 Gauge Steel",
+      "name": "Going Home",
+      "material": "18 Gauge Steel",
+      "finish": "Spruce Blue Shaded Platinum",
+      "interior": "Blue Crepe",
+      "price": 2620,
+      "img": "caskets/Going_Home.jpg"
+    },
+    {
+      "type": "Solid Bronze",
+      "name": "Harrison",
+      "material": "32oz Bronze",
+      "finish": "Brushed Natural/Venetian Bronze",
+      "interior": "Almond Velvet",
+      "price": 11580,
+      "img": "caskets/Harrison_Bronze.jpg"
+    },
+    {
+      "type": "Solid Bronze",
+      "name": "Harrison",
+      "material": "32oz Bronze",
+      "finish": "Brushed Natural/Golden Fawn",
+      "interior": "Almond Velvet",
+      "price": 11580,
+      "img": "caskets/Harrison_Gold_Fawn.jpg"
+    },
+    {
+      "type": "All Wood Construction",
+      "name": "IRA 321",
+      "material": "Oak",
+      "finish": "Light Unfinished",
+      "interior": "Ivory Crepe",
+      "price": 1130,
+      "img": "caskets/Ira.jpg"
+    },
+    {
+      "type": "Solid Copper",
+      "name": "Lincoln",
+      "material": "32oz Copper",
+      "finish": "Brushed Natural/Heritage Bronze",
+      "interior": "Almond Velvet",
+      "price": 8310,
+      "img": "caskets/Lincoln_Bronze.jpg"
+    },
+    {
+      "type": "Cremation Containers",
+      "name": "Longley",
+      "material": "Fiberwood",
+      "finish": "Medium Cherry",
+      "interior": "Blue Crepe",
+      "price": 1430,
+      "img": "caskets/IRY_Longley_Blue.jpg"
+    },
+    {
+      "type": "Cremation Containers",
+      "name": "Longley",
+      "material": "Fiberwood",
+      "finish": "Medium Cherry",
+      "interior": "Rosestone Crepe",
+      "price": 1430,
+      "img": "caskets/IRY_Longley_Rosetan.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Mercury",
+      "material": "20 Gauge Steel",
+      "finish": "Blue Sparkle Shaded Silver",
+      "interior": "Blue Capri Crepe",
+      "price": 1940,
+      "img": "caskets/Mercury_Blue.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Mercury",
+      "material": "20 Gauge Steel",
+      "finish": "Sunset Gold Shaded Venetian Bronze",
+      "interior": "Moselle Capri Crepe",
+      "price": 1940,
+      "img": "caskets/Mercury_Gold.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Mercury",
+      "material": "20 Gauge Steel",
+      "finish": "White Shaded Pink",
+      "interior": "Pink Capri Crepe",
+      "price": 1940,
+      "img": "caskets/Mercury_White_Pink.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Mercury",
+      "material": "20 Gauge Steel",
+      "finish": "Silver Shaded Ebony",
+      "interior": "Silver Capri Crepe",
+      "price": 1940,
+      "img": "caskets/Mercury_Silver.jpg"
+    },
+    {
+      "type": "Cloth Caskets",
+      "name": "Minimum",
+      "material": "Cardboard",
+      "finish": "Flannel Gray Exterior",
+      "interior": "Ivory Crepe",
+      "price": 620,
+      "img": "caskets/Minimum.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Monarch",
+      "material": "20 Gauge Steel",
+      "finish": "Wineberry Shaded Silver",
+      "interior": "Ivory Crepe",
+      "price": 2390,
+      "img": "caskets/Monarch_Wineberry.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Monarch",
+      "material": "20 Gauge Steel",
+      "finish": "Silver Shaded Light Gunmetal",
+      "interior": "Ivory Crepe",
+      "price": 2390,
+      "img": "caskets/Monarch_Silver.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Monarch",
+      "material": "20 Gauge Steel",
+      "finish": "Silver Rose Shaded Silver",
+      "interior": "Pink Crepe",
+      "price": 2390,
+      "img": "caskets/Monarch_Silver_Rose.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Monarch",
+      "material": "20 Gauge Steel",
+      "finish": "Sandstone Metallic",
+      "interior": "Rosetan Capri Crepe",
+      "price": 2390,
+      "img": "caskets/Monarch_Sandstone.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Montgomery",
+      "material": "Solid Ash",
+      "finish": "Stain Medium American Ash",
+      "interior": "Almond Mayfield Velvet",
+      "price": 4430,
+      "img": "caskets/Montgomery.jpg"
+    },
+    {
+      "type": "Cremation Containers",
+      "name": "Norfolk",
+      "material": "Fiberwood",
+      "finish": "Laminated Light Pine",
+      "interior": "Ivory Crepe",
+      "price": 1220,
+      "img": "caskets/Norfolk.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Oakland",
+      "material": "Solid Oak",
+      "finish": "Medium Matte Fawn/Shaded",
+      "interior": "Rosetan Crepe",
+      "price": 4200,
+      "img": "caskets/Oakland.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Olympus",
+      "material": "Solid Mahogany",
+      "finish": "High Polished Dark Georgetown",
+      "interior": "Beige Velvet",
+      "price": 9220,
+      "img": "caskets/Olympus.jpg"
+    },
+    {
+      "type": "18 Gauge Steel",
+      "name": "Pearl Rose",
+      "material": "18 Gauge Steel",
+      "finish": "Pastel Pink Shaded White",
+      "interior": "Pink Crepe",
+      "price": 2620,
+      "img": "caskets/Pearl_Rose.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Provincial",
+      "material": "Solid Poplar",
+      "finish": "Polished Dark Walnut",
+      "interior": "Rosetan Sand Pebble Crepe",
+      "price": 3910,
+      "img": "caskets/Provincial.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Sentry",
+      "material": "20 Gauge Steel",
+      "finish": "Monarch Blue",
+      "interior": "Blue Crepe",
+      "price": 892,
+      "img": "caskets/Sentry_Blue.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Sentry",
+      "material": "20 Gauge Steel",
+      "finish": "Orchid",
+      "interior": "Pink Crepe",
+      "price": 892,
+      "img": "caskets/Sentry_Orchid.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Sentry",
+      "material": "20 Gauge Steel",
+      "finish": "Venetian Bronze",
+      "interior": "Rosetone Crepe",
+      "price": 892,
+      "img": "caskets/Sentry_Bronze.jpg"
+    },
+    {
+      "type": "20 Gauge Steel Non-Gasketed",
+      "name": "Sentry",
+      "material": "20 Gauge Steel",
+      "finish": "Silver",
+      "interior": "White Crepe",
+      "price": 892,
+      "img": "caskets/Sentry_Silver.jpg"
+    },
+    {
+      "type": "18 Gauge Steel",
+      "name": "Springfield",
+      "material": "18 Gauge Steel",
+      "finish": "Brushed Natural Shaded London Blue",
+      "interior": "Arbutus Velvet",
+      "price": 3300,
+      "img": "caskets/Springfield_Blue.jpg"
+    },
+    {
+      "type": "18 Gauge Steel",
+      "name": "Springfield",
+      "material": "18 Gauge Steel",
+      "finish": "Brushed Copper Autumn Haze",
+      "interior": "Arbutus Velvet",
+      "price": 3300,
+      "img": "caskets/Springfield_Copper.jpg"
+    },
+    {
+      "type": "18 Gauge Steel",
+      "name": "Springfield",
+      "material": "18 Gauge Steel",
+      "finish": "Brushed Light Orchid Shaded Rosebud",
+      "interior": "Pink Velvet",
+      "price": 3300,
+      "img": "caskets/Springfield_Orchid.jpg"
+    },
+    {
+      "type": "18 Gauge Steel",
+      "name": "Springfield",
+      "material": "18 Gauge Steel",
+      "finish": "Brushed Natural Shaded Silver Pearl",
+      "interior": "Silver Velvet",
+      "price": 3300,
+      "img": "caskets/Springfield_Silver.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Warfield",
+      "material": "Solid Cherry",
+      "finish": "Polished Dark Cherrytone",
+      "interior": "Almond Mayfield Velvet",
+      "price": 6360,
+      "img": "caskets/Warfield_Cherry.jpg"
+    },
+    {
+      "type": "Hardwood",
+      "name": "Whitmire II",
+      "material": "Poplar Veneer",
+      "finish": "Satin Dark Walnut",
+      "interior": "Rosetan Crepe",
+      "price": 2390,
+      "img": "caskets/Whitmire.jpg"
+    }
+  ]
+}

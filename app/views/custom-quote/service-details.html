@@ -1,0 +1,68 @@
+<h1>Service Details</h1>
+
+<p><a data-ui-sref="app.services.custom-quote.disposition-options" class="btn btn-block btn-info" data-ng-class="formData.disposition ? 'hide' : ''">Select Disposition Option</a></p>
+
+<div class="form-group" data-ng-class="formData.disposition != 'Burial' ? 'hide' : ''">
+
+    <h4 class="title-block">Graveside Committal Service - <span>$400</span></h4>
+
+    <div class="help-block">
+        <p>A graveside committal service is a brief ritual or prayer usually following the funeral service. It is a
+            service conducted at the side of the grave, tomb, or mausoleum at which the remains of the
+            decedent or decedent's cremated remains are buried.</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="graveside_committal" data-ng-model="formData.graveside_committal" data-toggle-basket="Graveside Committal Service" data-price="400">
+            I would like to add Graveside Committal Service to my quote</label>
+    </div>
+
+    <div id="graveside_committal" class="visible-container" data-ng-class="formData.graveside_committal != true ? 'hide' : '' ">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="graveside_committal_off_hours" data-ng-model="formData.graveside_committal_off_hours" data-toggle-basket="Graveside Committal Service Off Hours" data-price="175">
+                I wish to conduct the Graveside Committal Service during a weekend or holiday, an
+                additional charge of $175.00 will apply to the initial price.</label>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-group" data-ng-class="formData.disposition != 'Cremation' ? 'hide' : ''">
+
+    <h4 class="title-block">Cremation Witness - <span>$400</span></h4>
+
+    <div class="help-block">
+        <p>A witness cremation is a gathering at the crematory, to view the deceased entering the retort.</p>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="cremation_witness" data-ng-model="formData.cremation_witness" data-toggle-basket="Cremation Witness" data-price="400">
+            I would like to witness the cremation</label>
+    </div>
+
+    <div id="cremation_witness" class="visible-container" data-ng-class="formData.cremation_witness != true ? 'hide' : '' ">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="cremation_witness_off_hours" data-ng-model="formData.cremation_witness_off_hours" data-toggle-basket="Cremation Witness Off Hours" data-price="175">
+                I wish to conduct the witness cremation after 5, during a weekend or holiday, an
+                additional charge of $175.00 will apply to the initial price.</label>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.service-type" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.transport-details" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>
