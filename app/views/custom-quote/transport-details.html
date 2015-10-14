@@ -1,0 +1,117 @@
+<h1>Transport Details</h1>
+
+<div class="form-group">
+
+    <h4 class="checkbox">
+        <label>
+            <input type="checkbox" name="hearse" data-ng-model="formData.hearse" data-toggle-basket="Hearse" data-price="300" id="hearse1" value="Hearse">
+            Hearse / Funeral Coach - <span class="cost">$300</span></label>
+    </h4>
+
+    <p>If you are having a gathering outside our Malinow and Silverman Chapel and require to have the
+        decedent present you may want to use the hearse/funeral coach. If you do not want to use the
+        funeral coach we can provide a white 2014 Dodge Grand Caravan to meet your needs free of
+        charge.</p>
+
+    <p>The hearse/funeral coach is $300 per three-hour block. Each additional hour thereafter will be an
+        additional $100.</p>
+
+    <div id="hearse" class="fields-container form-horizontal row">
+
+        <div class="number col-xs-2 pdr0">
+            <label>
+                <input type="number" class="form-control" min="3" value="3" disabled="disabled">
+            </label>
+        </div>
+
+        <div class="number multiply-input col-xs-10 pdl0" data-ng-class="formData.hearse != true ? 'hide' : '' ">
+            <div class="col-xs-1 control-label pd0 text-center">+</div>
+            <div class="col-xs-2 pdr0 pdl0">
+                <input id="hearse_additional" type="number" name="hearse_additional" class="form-control" min="0" max="20" data-ng-model="formData.hearse_additional" data-toggle-basket="Additional Hearse Hours" data-price="100">
+            </div>
+            <label class="col-xs-9 control-label text-left" for="hearse_additional"> Additional Hearse / Funeral Coach Hours</label>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <h4 class="checkbox">
+        <label>
+            <input type="checkbox" name="motorcade" data-ng-model="formData.motorcade" data-toggle-basket="Motorcade" data-price="400" id="motorcade1" value="Motorcade">
+            Motorcade - <span class="cost">$400</span></label>
+    </h4>
+
+    <p>A funeral procession, usually in motor vehicles, is from a funeral home, church or other place of
+        worship to the cemetery or crematory. The deceased is usually transported in a hearse, while
+        family and friends follow in their vehicles. The family has the option not to have a formal
+        procession. Instead funeral guest can meet at the cemetery or crematory on his or her own accord.</p>
+
+    <p>If there is a formal procession law requires funeral processions to use motor escorts. Company
+        policy requires one escort per six vehicles, with a minimum of two escorts. Each escort is $200.</p>
+
+    <div id="motorcade" class="fields-container form-horizontal row">
+
+        <div class="number col-xs-2 pdr0">
+            <label>
+                <input type="number" class="form-control" min="2" value="2" disabled="disabled">
+            </label>
+        </div>
+
+        <div class="number multiply-input col-xs-10 pdl0" data-ng-class="formData.motorcade != true ? 'hide' : '' ">
+            <div class="col-xs-1 control-label pd0 text-center">+</div>
+            <div class="col-xs-2 pdr0 pdl0">
+                <input id="motorcade_additional" type="number" name="motorcade_additional" class="form-control" min="0" max="20" data-ng-model="formData.motorcade_additional" data-toggle-basket="Additional Motorcade Hours" data-price="200">
+            </div>
+            <label class="col-xs-9 control-label text-left" for="motorcade_additional"> Additional Escorts</label>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <h4 class="checkbox">
+        <label>
+            <input type="checkbox" name="limousine" data-ng-model="formData.limousine" data-toggle-basket="Limousine" data-price="375" id="limousine1" value="Limousine">
+            Limousine - <span class="cost">$375</span></label>
+    </h4>
+
+    <p>An 8-passenger limousine for $375 is available for three hours. Each additional hour need will be
+        $110.</p>
+
+    <div id="limousine" class="fields-container form-horizontal row">
+
+        <div class="number col-xs-2 pdr0">
+            <label>
+                <input type="number" class="form-control" min="3" value="3" disabled="disabled">
+            </label>
+        </div>
+
+        <div class="number multiply-input col-xs-10 pdl0" data-ng-class="formData.limousine != true ? 'hide' : '' ">
+            <div class="col-xs-1 control-label pd0 text-center">+</div>
+            <div class="col-xs-2 pdr0 pdl0">
+                <input id="limousine_additional" type="number" name="limousine_additional" class="form-control" min="0" max="20" data-ng-model="formData.limousine_additional" data-toggle-basket="Additional Limousine Hours" data-price="110">
+            </div>
+            <label class="col-xs-9 control-label text-left" for="limousine_additional"> Additional Limousine Hours</label>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-sm-3">
+        <a data-ui-sref="app.services.custom-quote.service-details" class="btn btn-block btn-info">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+        <a data-ui-sref="app.services.custom-quote.miscellaneous" class="btn btn-block btn-info">
+            Continue <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>
