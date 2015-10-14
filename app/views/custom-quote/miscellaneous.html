@@ -114,9 +114,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr data-ng-repeat="item in dataMerch.items | orderBy:'type' | filter:{ type:filterCasketType } | filter:{ material:filterCasketMaterials } | filter:{ finish:filterCasketFinish } | filter:{ interior:filterCasketInterior }" data-ng-hide="dataMerch == 'undefined'">
+                    <tr data-ng-repeat="item in dataMerch.items | orderBy:['type','name'] | filter:{ type:filterCasketType } | filter:{ material:filterCasketMaterials } | filter:{ finish:filterCasketFinish } | filter:{ interior:filterCasketInterior }" data-ng-hide="dataMerch == 'undefined'">
                         <td>
-                            <a class="merch-item" href="img/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="img/thumb/{{item.img}}" alt=""></a>
+                            <a class="merch-item" href="images/merchandise/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="images/merchandise/thumb/{{item.img}}" alt=""></a>
                         </td>
                         <td>{{item.name}}</td>
                         <td>{{item.type}}</td>
@@ -188,7 +188,7 @@
                     <tbody>
                     <tr data-ng-repeat="item in dataMerch.items | filter:{ type:filterUrnType }" data-ng-hide="dataMerch == 'undefined'">
                         <td>
-                            <a class="merch-item" href="img/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="img/thumb/{{item.img}}" alt=""></a>
+                            <a class="merch-item" href="images/merchandise/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="images/merchandise/thumb/{{item.img}}" alt=""></a>
                         </td>
                         <td>{{item.name}}</td>
                         <td>{{item.type}}</td>
