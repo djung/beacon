@@ -159,10 +159,3 @@ app.config ($stateProvider, $urlRouterProvider) ->
                 'content@':
                     templateUrl: 'views/contact.html'
                     controller: 'ContactCtrl'
-
-    $stateProvider
-        .state 'app.healthy-living',
-            url: '/healthy-living'
-            views:
-                'content@':
-                    templateUrl: 'views/healthy-living.html'
