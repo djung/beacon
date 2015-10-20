@@ -11,7 +11,6 @@ app = angular.module 'beaconDynamicApp'
   
 app.controller 'ContactCtrl', ($scope, MessageModel) ->
     $scope.message = MessageModel.create()
-    
     $scope.submit = () ->
         $scope.error = null
         $scope.confirm = null

@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       coffee: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
+        files: ['<%= yeoman.app %>/scripts/{,*/}{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['newer:coffee:dist']
       },
       coffeeTest: {
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '.tmp/scripts/{,*/}*.js',
+          '.tmp/scripts/{,*/}{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}{,*/}{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.app %>/resources/*.json'
         ]
@@ -207,7 +207,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/scripts',
-          src: '{,*/}*{,*/}*.coffee',
+          src: '{,*/}*{,*/}*{,*/}*.coffee',
           dest: '.tmp/scripts',
           ext: '.js'
         }]

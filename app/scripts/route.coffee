@@ -70,7 +70,7 @@ app.config ($stateProvider, $urlRouterProvider) ->
             views:
                 'content@':
                     templateUrl: 'views/custom-quote/form.html'
-                    controller: 'mainCtrl'
+                    controller: 'formCtrl'
 
     $stateProvider
         .state 'app.services.custom-quote.indeclinable-charges',
