@@ -1,28 +1,31 @@
 <h1>Total</h1>
 
-<p>The total quote for your funeral is {{total | currency}}</p>
+<p>The total quote for your funeral is {{ formData.total | currency }}</p>
 
 <p>Please leave us your contact information so we can email you the quote and follow up with a call.</p>
 
 <div class="form-horizontal">
-    <div class="form-group">
-        <label for="fieldName" class="col-sm-3 control-label">Name <span class="required">*</span></label>
+    <h4 ng-if="error" class="text-danger">{{ error }}</h4>
+    <h4 ng-if="confirm" class="text-success">{{ confirm }}</h4>
+
+    <div class="form-group name">
+        <label for="name" class="col-sm-3 control-label">Name <span class="required">*</span></label>
         <div class="col-sm-6">
-            <input id="fieldName" type="text" class="form-control" data-ng-model="formData.name" placeholder="Name" required="required">
+            <input id="name" type="text" class="form-control" data-ng-model="formData.name" placeholder="Enter your name" required="required">
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="fieldEmail" class="col-sm-3 control-label">Email Address <span class="required">*</span></label>
+    <div class="form-group email">
+        <label for="email" class="col-sm-3 control-label">Email <span class="required">*</span></label>
         <div class="col-sm-6">
-            <input id="fieldEmail" type="email" class="form-control" data-ng-model="formData.email" placeholder="Email" required="required">
+            <input id="email" type="email" class="form-control" data-ng-model="formData.email" placeholder="Enter your email" required="required">
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="fieldNumber" class="col-sm-3 control-label">Phone Number <span class="required">*</span></label>
+    <div class="form-group phone">
+        <label for="phone" class="col-sm-3 control-label">Phone Number <span class="required">*</span></label>
         <div class="col-sm-6">
-            <input id="fieldNumber" type="text" class="form-control" data-ng-model="formData.number" placeholder="(555)555-5555" required="required">
+            <input id="phone" type="tel" class="form-control" data-ng-model="formData.phone" placeholder="Enter your contact number" required="required">
         </div>
     </div>
 
