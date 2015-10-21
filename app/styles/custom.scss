@@ -151,17 +151,20 @@
           float: left;
           padding-left: 0;
           padding-right: 0;
-          width: 0;
+          width: 1px;
+          margin-left: -1px;
           overflow: hidden;
+          visibility: hidden;
           white-space: nowrap;
           background-color: $theme-color-dark;
-          -webkit-transition: width 1s, padding 1s;
-          -moz-transition: width 1s, padding 1s;
-          -ms-transition: width 1s, padding 1s;
-          -o-transition: width 1s, padding 1s;
-          transition: width 1s, padding 1s;
+          -webkit-transition: width 1s, padding 1s, visibility 1s;
+          -moz-transition: width 1s, padding 1s, visibility 1s;
+          -ms-transition: width 1s, padding 1s, visibility 1s;
+          -o-transition: width 1s, padding 1s, visibility 1s;
+          transition: width 1s, padding 1s, visibility 1s;
 
           &.active{
+            visibility: visible;
             display: block;
             padding: 15px;
             width: 218px;
@@ -169,6 +172,7 @@
         }
 
         &:hover > a {
+          visibility: visible;
           display: block;
           padding: 15px;
           width: 218px;
