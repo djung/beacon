@@ -40,33 +40,31 @@
             </div>
 
             <div class="col-md-4 col-sm-4" role="complementary">
-                <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                    <div class="wg-block">
-                        <div class="wg-title">
-                            <h4>Custom Quote</h4>
-                        </div>
-                        <div class="wg-body">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Items</th>
-                                    <th>Total</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr data-ng-repeat="item in basket.items">
-                                    <th scope="row">{{ item.label }}</th>
-                                    <td>{{ item.price | currency }}</td>
-                                </tr>
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th>Total</th>
-                                    <td>{{ formData.total | currency }}</td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                <div class="wg-block">
+                    <div class="wg-title">
+                        <h4>Custom Quote</h4>
+                    </div>
+                    <div class="wg-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Items</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr data-ng-repeat="item in basket.items">
+                                <th scope="row">{{ item.label }}</th>
+                                <td>{{ item.price | currency }}</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <td>{{ formData.total | currency }}</td>
+                            </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>
