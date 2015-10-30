@@ -153,6 +153,14 @@ app.config ($stateProvider, $urlRouterProvider) ->
                     controller: 'totalCtrl'
 
     $stateProvider
+        .state 'app.merchandise',
+            url: '/merchandise'
+            views:
+                'content@':
+                    templateUrl: 'views/merchandise.html'
+                    controller: 'MerchandiseCtrl'
+
+    $stateProvider
         .state 'app.contact',
             url: '/contact'
             views:
