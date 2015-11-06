@@ -1,27 +1,73 @@
 <header class="page-heading clearfix">
-    <h1 class="heading-title pull-left">Merchandise</h1>
+    <h1 class="heading-title pull-left">Urns</h1>
     <div class="breadcrumbs pull-right">
         <ul class="breadcrumbs-list">
             <li class="breadcrumbs-label">You are here:</li>
             <li><a ui-sref="app.homepage">Home</a><i class="fa fa-angle-right"></i></li>
-            <li class="current">Merchandise</li>
+            <li class="current">Urns</li>
         </ul>
     </div><!--//breadcrumbs-->
 </header>
 <div class="row page-row">
     <article class="welcome col-md-8 col-sm-7">
-        <h3 class="title">Merchandise</h3>
         <p>Prices are effective as of October 15th, 2014 and are subject to change without notice.</p>
 
         <p>The goods and services shown below are those we can provide to our customers. You may choose only the items you desire. However, any funeral arrangements you select will include a charge for our basic services and overhead. If legal or other requirements mean you must buy any item you did not specifically ask for, we will explain the reason in writing on the statement we provide describing the funeral goods and services you selected. Sales tax will be added to all merchandise selected for use in this state.</p>
 
         <p>Prior to drafting any contract for goods or services, the responsible party or the decedents’ survivor who is handling the funeral arrangements is entitled to receive a copy of any preneed agreement in the possession of the Funeral establishment that has been signed and paid for, in full or in part, by or on behalf of the decedent.</p>
 
-        <p>View Price Lists:</p>
-            <ul>
-                <li><a ui-sref="app.caskets">Casket Price List</a></li>
-                <li><a ui-sref="app.urns">Urn Price List</a></li>
-            </ul>
+        <h3 class="title">Urn Catalog</h3>
+
+            <p><a href="https://s3.amazonaws.com/beacon-mortuary-assets/Urn_Price_List.pdf" target="_blank">Download Urn Catalog Price List</a></p>
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label>
+                            <select name="type" class="by-type form-control" data-ng-model="filterUrnType">
+                                <option value="">--- Filter By Type ---</option>
+                                <option data-ng-repeat="n in dataMerch.filters.types | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+
+                </div>
+                <div class="col-xs-4">
+
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Width</th>
+                    <th>Height</th>
+                    <th>Depth</th>
+                    <th>Volume</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="item in dataMerch.items | filter:{ type:filterUrnType }" data-ng-hide="dataMerch == 'undefined'">
+                    <td>
+                        <a class="merch-item" href="images/merchandise/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="images/merchandise/thumb/{{item.img}}" alt=""></a>
+                    </td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.width}}</td>
+                    <td>{{item.height}}</td>
+                    <td>{{item.depth}}</td>
+                    <td>{{item.volume}}</td>
+                    <td>{{item.price | currency}}</td>
+                </tr>
+                </tbody>
+            </table>
+
     </article><!--//page-content-->
     <aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">
         <section class="widget has-divider">
