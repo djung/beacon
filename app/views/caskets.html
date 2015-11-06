@@ -1,0 +1,111 @@
+<header class="page-heading clearfix">
+    <h1 class="heading-title pull-left">Caskets</h1>
+    <div class="breadcrumbs pull-right">
+        <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-label">You are here:</li>
+            <li><a ui-sref="app.homepage">Home</a><i class="fa fa-angle-right"></i></li>
+            <li class="current">Caskets</li>
+        </ul>
+    </div><!--//breadcrumbs-->
+</header>
+<div class="row page-row">
+    <article class="welcome col-md-8 col-sm-7">
+        <p>If you purchase a casket or alternative container from somewhere other than the funeral establishment, the law prohibits the funeral establishment from charging a "casket handling" fee. However, your purchase must meet the standards set by the cemetery or crematory and must take into consideration the size of the body. Remember to shop wisely, since retail casket sellers are not bound by the same laws or regulations that govern funeral establishments, crematories, and cemeteries. If purchasing items in advance, insist that any money you pay be placed in a trust, and be sure to get a copy of the trust agreement.</p>
+
+        <p>These prices are effective as of Oct 15, 2014 and are subject to change without notice.</p>
+
+        <p>“THERE IS NO SCIENTIFIC OR OTHER EVIDENCE THAT ANY CASKET WITH A SEALING DEVICE WILL PRESERVE HUMAN REMAINS.”</p>
+
+        <p>Warranties</p>
+
+        </p>Our Mortuary makes no representations or warranties about the protective value of certain caskets other than those made by the manufacturer. The only warranties, expressed or implied, granted in connection with goods sold with this funeral or cremation service are the written warranties, if any, extended by the manufactures thereof. No other warranties and specifically, no warranties of merchantability and fitness for particular purpose are extended by the seller.</p>
+
+        <h3 class="title">Casket Catalog</h3>
+
+            <p><a href="https://s3.amazonaws.com/beacon-mortuary-assets/Casket_Price_List.pdf" target="_blank">Download Casket Catalog Price List</a></p>
+
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <label>
+                            <select name="type" class="by-type form-control" data-ng-model="filterCasketType">
+                                <option value="">--- Filter By Type ---</option>
+                                <option data-ng-repeat="n in dataMerch.filters.types | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <label>
+                            <select name="type" class="by-materials form-control" data-ng-model="filterCasketMaterials" data-ng-disabled="!ffMaterials[0]">
+                                <option value="">--- Filter By Materials ---</option>
+                                <option data-ng-repeat="n in ffMaterials | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <label>
+                            <select name="type" class="by-finish form-control" data-ng-model="filterCasketFinish" data-ng-disabled="!ffFinish[0]">
+                                <option value="">--- Filter By Finish ---</option>
+                                <option data-ng-repeat="n in ffFinish | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <label>
+                            <select name="type" class="by-interior form-control" data-ng-model="filterCasketInterior" data-ng-disabled="!ffInterior[0]">
+                                <option value="">--- Filter By Interior ---</option>
+                                <option data-ng-repeat="n in ffInterior | orderBy: 'toString()'" value="{{ n }}">{{n}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Material</th>
+                    <th>Finish</th>
+                    <th>Interior</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="item in dataMerch.items | orderBy:['type','name'] | filter:{ type:filterCasketType } | filter:{ material:filterCasketMaterials } | filter:{ finish:filterCasketFinish } | filter:{ interior:filterCasketInterior }" data-ng-hide="dataMerch == 'undefined'">
+                    <td>
+                        <a class="merch-item" href="images/merchandise/full/{{item.img}}" data-lightbox="{{ item.type | slugify }}"><img class="img-responsive" data-ng-src="images/merchandise/thumb/{{item.img}}" alt=""></a>
+                    </td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.material}}</td>
+                    <td>{{item.finish}}</td>
+                    <td>{{item.interior}}</td>
+                    <td>{{item.price | currency}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+    </article><!--//page-content-->
+    <aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">
+        <section class="widget has-divider">
+            <h3 class="title">Consumer Guide</h3>
+            <p>The Consumer’s Guide for Funeral and Cemetery Purchases is a resource of information. This guide informs families of their rights when negotiating purchases of goods and services from any Funeral home. Please review this guide.</p>
+            <a class="btn btn-theme" href="https://s3.amazonaws.com/beacon-mortuary-assets/consumer_guide.pdf" target="_blank"><i class="fa fa-download"></i>Download Guide</a>
+        </section><!--//widget-->
+        <section class="widget">
+            <h3 class="title">Contact</h3>
+            <p class="tel"><i class="fa fa-phone"></i>Tel: <a href="tel:1-424-324-9474">(424) 324-9474</a></p>
+            <p class="email"><i class="fa fa-envelope"></i>Email: <a href="mailto:cheryl@beaconmortuary.com">cheryl@beaconmortuary.com</a></p>
+        </section><!--//widget-->
+    </aside>
+</div><!--//page-row-->
+
