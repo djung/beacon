@@ -2,13 +2,13 @@
 
 app = angular.module 'beaconDynamicApp'
 
-app.controller 'formCtrl', ($scope, QuoteModel) ->
+app.controller 'formCtrl', ($scope, Restangular, lambda_config) ->
         'use strict'
         $scope.basket = items: []
         $scope.formData = {}
         $scope.formData.total = 0
 
-        $scope.quote = QuoteModel.create()
+        $scope.quote = {}
 
         $scope.processForm = () ->
 
@@ -34,7 +34,7 @@ app.controller 'formCtrl', ($scope, QuoteModel) ->
                     $scope.item['price'] = "#{item['price']}"
                     $scope.quote.items.push $scope.item
 
-                $scope.quote.save().then(
+                Restangular.service(lambda_config.quote_endpoint).post($scope.quote).then(
                     (response) ->
                         $scope.error = null
                         $scope.confirm = "Thank you for contacting us."

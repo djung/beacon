@@ -416,7 +416,7 @@
     "depth":"--",
     "volume":"200",
     "price":330,
-    "img":"urns/Purity.jpg"
+    "img":"urns/Purity.png"
   },
   {
     "type":"Marble & Jade",
@@ -526,7 +526,7 @@
     "depth":"7.7",
     "volume":"258",
     "price":200,
-    "img":"urns/Renton_Maple_710.jpg"
+    "img":"urns/Renton_Maple_710.png"
   },
   {
     "type":"Wood",
@@ -626,7 +626,7 @@
     "depth":"--",
     "volume":"--",
     "price":150,
-    "img":"urns/Heart_11031555.jpg"
+    "img":"urns/Heart_11031555.png"
   },
   {
     "type":"Jewelry Keepsakes",
@@ -646,7 +646,7 @@
     "depth":"--",
     "volume":"--",
     "price":125,
-    "img":"urns/Primrose_11031563.jpg"
+    "img":"urns/Primrose_11031563.png"
   },
   {
     "type":"Jewelry Keepsakes",
@@ -666,7 +666,7 @@
     "depth":"--",
     "volume":"--",
     "price":180,
-    "img":"urns/Large_Gold_Heart_11031558.jpg"
+    "img":"urns/Large_Gold_Heart_11031558.png"
   },
   {
     "type":"Jewelry Keepsakes",
@@ -676,7 +676,7 @@
     "depth":"--",
     "volume":"--",
     "price":150,
-    "img":"urns/Small_Gold_Heart_11031559.jpg"
+    "img":"urns/Small_Gold_Heart_11031559.png"
   },
   {
     "type":"Jewelry Keepsakes",

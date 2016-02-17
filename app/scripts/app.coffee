@@ -21,9 +21,11 @@ app = angular.module 'beaconDynamicApp', [
     'restangular'
     'slugifier'
   ]
-  
-app.config (RestangularProvider) ->
-    RestangularProvider.setBaseUrl('http://api.beaconmortuary.com/')
 
-    RestangularProvider.setRestangularFields
-        id: "_id"
+app.constant
+    'lambda_config':
+        'base_url': 'https://7nwsclvqig.execute-api.us-east-1.amazonaws.com/prod'
+        'quote_endpoint': 'quote-email-production'
+  
+app.config (RestangularProvider, lambda_config) ->
+    RestangularProvider.setBaseUrl(lambda_config.base_url)
