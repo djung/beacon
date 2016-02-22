@@ -161,22 +161,6 @@ app.config ($stateProvider, $urlRouterProvider) ->
                     templateUrl: 'views/merchandise.html'
                     controller: 'MerchandiseCtrl'
 
-    $stateProvider
-        .state 'app.urns',
-            url: '/urns'
-            views:
-                'content@':
-                    templateUrl: 'views/urns.html'
-                    controller: 'UrnsCtrl'
-
-    $stateProvider
-        .state 'app.caskets',
-            url: '/caskets'
-            views:
-                'content@':
-                    templateUrl: 'views/caskets.html'
-                    controller: 'CasketsCtrl'
-
     # $stateProvider
     #     .state 'app.contact',
     #         url: '/contact'
